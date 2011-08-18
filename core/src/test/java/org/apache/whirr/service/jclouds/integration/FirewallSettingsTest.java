@@ -33,6 +33,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.Set;
 
+@SuppressWarnings("deprecation")
 public class FirewallSettingsTest {
 
   private static final String REGION = "us-east-1";

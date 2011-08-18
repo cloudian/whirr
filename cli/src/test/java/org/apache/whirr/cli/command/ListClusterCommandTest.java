@@ -82,7 +82,8 @@ public class ListClusterCommandTest {
     return StringContains.containsString("Usage: whirr list-cluster [OPTIONS]");
   }
 
-  @Test
+  @SuppressWarnings({ "rawtypes", "deprecation", "unchecked" })
+@Test
   public void testAllOptions() throws Exception {
 
     ClusterControllerFactory factory = mock(ClusterControllerFactory.class);

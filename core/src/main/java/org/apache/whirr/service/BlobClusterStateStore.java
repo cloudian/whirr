@@ -65,7 +65,8 @@ public class BlobClusterStateStore extends ClusterStateStore {
     return null;
   }
 
-  @Override
+  @SuppressWarnings("deprecation")
+@Override
   public void save(Cluster cluster) throws IOException {
     BlobStore store = context.getBlobStore();
 
