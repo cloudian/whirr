@@ -378,7 +378,8 @@ public class ClusterSpec {
     return config.getInt(key.getConfigName(), defaultValue);
   }
 
-  private List<String> getList(Property key) {
+  @SuppressWarnings("unchecked")
+private List<String> getList(Property key) {
     return config.getList(key.getConfigName());
   }
 

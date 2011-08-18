@@ -35,6 +35,7 @@ import org.jclouds.compute.ComputeServiceContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("deprecation")
 public class FirewallManager {
 
   public static class Rule {
@@ -140,7 +141,7 @@ public class FirewallManager {
    * @param rule The rule to add to the firewall. 
    * @throws IOException
    */
-  public void addRule(Rule rule) throws IOException {
+public void addRule(Rule rule) throws IOException {
     Set<Instance> instances = Sets.newHashSet();
     if (rule.destinations != null) {
       instances.addAll(rule.destinations);

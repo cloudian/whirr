@@ -77,7 +77,8 @@ public class ClusterSpecTest {
     assertThat(System.getProperty("whirr.login-user"), is("ubuntu"));
   }
   
-  @Test
+  @SuppressWarnings("unchecked")
+@Test
   public void testGetConfigurationForKeysWithPrefix()
   throws ConfigurationException, JSchException, IOException {
     Configuration conf = new PropertiesConfiguration();

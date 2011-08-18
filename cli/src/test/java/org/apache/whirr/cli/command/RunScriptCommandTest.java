@@ -81,7 +81,8 @@ public class RunScriptCommandTest {
       containsString("Please specify a script file to be executed."));
   }
 
-  @Test
+  @SuppressWarnings("unchecked")
+@Test
   public void testRunScriptByInstanceId() throws Exception {
     ClusterControllerFactory factory = mock(ClusterControllerFactory.class);
     ClusterController controller = mock(ClusterController.class);
@@ -102,6 +103,7 @@ public class RunScriptCommandTest {
       ));
     assertThat(rc, is(0));
 
+    @SuppressWarnings("rawtypes")
     ArgumentCaptor<Predicate> predicate = ArgumentCaptor.forClass(Predicate.class);
     verify(controller).runScriptOnNodesMatching(
       (ClusterSpec)any(), predicate.capture(), (Statement) any());
@@ -113,7 +115,8 @@ public class RunScriptCommandTest {
     assertThat(predicate.getValue().toString(), is(expected.toString()));
   }
 
-  @Test
+  @SuppressWarnings("unchecked")
+@Test
   public void testRunScriptByRole() throws Exception {
     ClusterControllerFactory factory = mock(ClusterControllerFactory.class);
     ClusterController controller = mock(ClusterController.class);
@@ -140,6 +143,7 @@ public class RunScriptCommandTest {
       ));
     assertThat(rc, is(0));
 
+    @SuppressWarnings("rawtypes")
     ArgumentCaptor<Predicate> predicate = ArgumentCaptor.forClass(Predicate.class);
     verify(controller).runScriptOnNodesMatching(
       (ClusterSpec)any(), predicate.capture(), (Statement) any());

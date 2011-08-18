@@ -40,12 +40,6 @@
     <module>cli</module>
     <module>core</module>
     <module>services/cassandra</module>
-    <module>services/cdh</module>
-    <module>services/hadoop</module>
-    <module>services/zookeeper</module>
-    <module>services/hbase</module>
-    <module>services/voldemort</module>
-    <module>services/elasticsearch</module>
   </modules>
 
   <properties>
